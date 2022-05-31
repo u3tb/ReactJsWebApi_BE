@@ -5726,11 +5726,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\NNH\\ReactJsProject\\webApiReactJs\\webApiReactJs.csproj",
+      "projectUniqueName": "D:\\NNH\\ReactJsProject\\ReactJsWebApi_BE\\webApiReactJs.csproj",
       "projectName": "webApiReactJs",
-      "projectPath": "D:\\NNH\\ReactJsProject\\webApiReactJs\\webApiReactJs.csproj",
+      "projectPath": "D:\\NNH\\ReactJsProject\\ReactJsWebApi_BE\\webApiReactJs.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\NNH\\ReactJsProject\\webApiReactJs\\obj\\",
+      "outputPath": "D:\\NNH\\ReactJsProject\\ReactJsWebApi_BE\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

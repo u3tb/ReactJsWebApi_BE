@@ -36,8 +36,8 @@ namespace webApiReactJs.Controllers
                 Title = s.Title,
                 Body = s.Body,
                 Slug = s.Slug,
-                idCategory = s.idCategory,
-                Category = _db.Categories.Where(a => a.idCategory == s.idCategory).FirstOrDefault()
+                CategoryId = s.CategoryId,
+                Category = _db.Categories.Where(a => a.idCategory == s.CategoryId).FirstOrDefault()
             }).ToList();
             return products;
         }
@@ -52,8 +52,8 @@ namespace webApiReactJs.Controllers
                 Title = s.Title,
                 Body = s.Body,
                 Slug = s.Slug,
-                idCategory = s.idCategory,
-                Category = _db.Categories.Where(a => a.idCategory == s.idCategory).FirstOrDefault()
+                CategoryId = s.CategoryId,
+                Category = _db.Categories.Where(a => a.idCategory == s.CategoryId).FirstOrDefault()
             }).Where(a => a.idProduct == id).FirstOrDefault();
             return products;
         }

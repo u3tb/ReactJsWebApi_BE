@@ -79,11 +79,6 @@ namespace webApiReactJs
             {
                 endpoints.MapControllers();
             });
-
-            ////nnh
-            //app.UseCors(MyAllowSpecificOrigins);
-
-
         }
     }
 }
