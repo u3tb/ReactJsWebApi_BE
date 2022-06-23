@@ -21,7 +21,7 @@ namespace webApiReactJs
 {
     public class Startup
     {
-        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        //readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         public Startup(IConfiguration configuration)
         {
@@ -44,16 +44,18 @@ namespace webApiReactJs
 
 
             //nnh
-            services.AddCors(options =>
-            {
-                options.AddPolicy(name: MyAllowSpecificOrigins,
-                                  builder =>
-                                  {
-                                      builder.WithOrigins("http://localhost:3000")
-                                                              .AllowAnyHeader()
-                                                        .AllowAnyMethod();
-                                  });
-            });
+            services.AddCors();
+
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy(name: MyAllowSpecificOrigins,
+            //                      builder =>
+            //                      {
+            //                          builder.WithOrigins("http://localhost:3000")
+            //                                                  .AllowAnyHeader()
+            //                                            .AllowAnyMethod();
+            //                      });
+            //});
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);  //phai co lệnh này thì mới chạy được ko là báo lỗi Cors
 
             services.AddDbContext<EFDataContext>(options =>
@@ -71,7 +73,7 @@ namespace webApiReactJs
             {
                 app.UseHsts();
             }
-            app.UseCors(MyAllowSpecificOrigins);
+            //app.UseCors(MyAllowSpecificOrigins);
             app.UseHttpsRedirection();
             //app.UseMvc();
 
@@ -79,6 +81,11 @@ namespace webApiReactJs
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            // global cors policy
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
 
             app.UseAuthorization();
 
